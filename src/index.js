@@ -11,4 +11,4 @@ module.exports = function toReadable (number) {
     }
 }
 
-console.log(toReadable(99))
+// console.log(toReadable(99))
