@@ -1,14 +1,20 @@
 module.exports = function toReadable (number) {
     let firstTwenty = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen','eighteen', 'nineteen'];
     let tens = ['twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
-
+    let hundreds = []
+    let arrNum = number.toString().split('');
     if(number < 20) {
         return firstTwenty[number]
     }
-    if (number > 20 && number < 100) {
-        let arrNum = number.toString().split('')
-        return tens[arrNum[0] - 2] + ' ' + firstTwenty[arrNum[1]]
+    if (number => 20 && number < 100) {
+        let arrNum = number.toString().split('');
+        if(arrNum[1] === '0'){
+            return tens[arrNum[0] - 2]
+        } else {
+           return tens[arrNum[0] - 2] + ' ' + firstTwenty[arrNum[1]] 
+        }
+        
     }
 }
 
-// console.log(toReadable(99))
+// console.log(toReadable(25))
