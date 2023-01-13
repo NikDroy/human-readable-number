@@ -39,4 +39,3 @@ module.exports = function toReadable (number) {
         }
     return res;
 }
-console.log(toReadable(100))
