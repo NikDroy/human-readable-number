@@ -30,7 +30,7 @@ module.exports = function toReadable (number) {
             else if(arrNum[1] === '1'){
                 res = `${firstNums[arrNum[0]]} hundred ${secondNums[arrNum[2]]}`;
             }     
-            else if(number > 100 && number % 100 === 0){
+            else if(number % 100 == 0){
             res = `${firstNums[arrNum[0]]} hundred`;
             }
         else { 
@@ -39,3 +39,4 @@ module.exports = function toReadable (number) {
         }
     return res;
 }
+console.log(toReadable(100))
